@@ -37,7 +37,7 @@ function App(): JSX.Element {
     </View>
       <TouchableOpacity onPress={generatorColor}>
         <View style={styles.actionBtn}>
-          <Text style={styles.actionBtnTxt}> Press me </Text>
+          <Text style={styles.actionBtnTxt}> Change color !</Text>
         </View>
       </TouchableOpacity>
     </View>
