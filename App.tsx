@@ -20,7 +20,7 @@ function App(): JSX.Element {
   const [backgroundColor, setBackgroundColor] = useState("#ffffff")
 
   const generatorColor =() =>{
-    
+
   }
 
 
@@ -40,6 +40,7 @@ function App(): JSX.Element {
 
 const styles = StyleSheet.create({
   container:{
+    flex:1
 
   },
   actionBtn:{
