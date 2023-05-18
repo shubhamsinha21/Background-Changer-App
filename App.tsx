@@ -32,9 +32,12 @@ function App(): JSX.Element {
     <StatusBar backgroundColor={randomBackground}/>
     <View style={[styles.container, {backgroundColor:randomBackground}]}>
     <View style={styles.rectangle}>
-      <View style={[styles.square, {backgroundColor:randomBackground}]}></View>
+      <View style={[styles.circle, {backgroundColor:randomBackground}]}></View>
       <View style={[styles.circle, {backgroundColor:randomBackground}]}></View>
     </View>
+    <View style={styles.rectangle}>
+      <View style={[styles.square, {backgroundColor:randomBackground}]}></View>
+      </View>
       <TouchableOpacity onPress={generatorColor}>
         <View style={styles.actionBtn}>
           <Text style={styles.actionBtnTxt}> Change color !</Text>
@@ -66,20 +69,24 @@ const styles = StyleSheet.create({
     width:380,
     height:200,
     backgroundColor:'#6A1B4D',
-    marginBottom:100,
-    marginTop:-100,
+    marginBottom:20,
+    marginTop:-50,
     flexDirection:'row',
     alignItems:'center',
+    justifyContent:'center'
   },
   square:{
     width:120,
     height:120,
     margin:40,
+    alignItems:'center',
+    justifyContent:'center'
   },
   circle:{
     width:120,
     height:120,
-    borderRadius:100
+    borderRadius:100,
+    margin:25,
   }
 });
 
