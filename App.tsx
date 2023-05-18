@@ -14,7 +14,7 @@ function App(): JSX.Element {
   //by writing JSX.Element, we are saying that the function only contains JSX
   //by default also, it allow only jsx
   
-  const [randombackground, setRandomBackground] = useState("#ffffff")
+  const [randomBackground, setRandomBackground] = useState("#ffffff")
 
   const generatorColor =() =>{
    const hexRange = '0123456789ABCDEF'
@@ -29,8 +29,12 @@ function App(): JSX.Element {
 
   return (
     <>
-    <StatusBar backgroundColor={'#00000'}/>
-    <View style={[styles.container, {backgroundColor:randombackground}]}>
+    <StatusBar backgroundColor={randomBackground}/>
+    <View style={[styles.container, {backgroundColor:randomBackground}]}>
+    <View style={styles.rectangle}>
+      <View style={[styles.square, {backgroundColor:randomBackground}]}></View>
+      <View style={[styles.circle, {backgroundColor:randomBackground}]}></View>
+    </View>
       <TouchableOpacity onPress={generatorColor}>
         <View style={styles.actionBtn}>
           <Text style={styles.actionBtnTxt}> Press me </Text>
@@ -49,14 +53,33 @@ const styles = StyleSheet.create({
   },
   actionBtn:{
     borderRadius:20,
-    backgroundColor:'6A1B4D',
+    backgroundColor:'#6A1B4D',
     paddingVertical:10,
     paddingHorizontal:40
   },
   actionBtnTxt:{
     fontSize:20,
-    color:'#FFFFFF',
+    color:'#ffffff',
    textTransform:'uppercase'
+  },
+  rectangle:{
+    width:380,
+    height:200,
+    backgroundColor:'#6A1B4D',
+    marginBottom:100,
+    marginTop:-100,
+    flexDirection:'row',
+    alignItems:'center',
+  },
+  square:{
+    width:120,
+    height:120,
+    margin:40,
+  },
+  circle:{
+    width:120,
+    height:120,
+    borderRadius:100
   }
 });
 
